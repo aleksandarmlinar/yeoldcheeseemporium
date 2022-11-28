@@ -1,0 +1,190 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <title>Tilsiter Cheese • Ye Old Cheese Emporium</title>
+            <!-- Requiered meta tags -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+            <meta charset="utf-8">
+            <!-- Different links for css, bootstrap etc.-->
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="../css/style.css">
+        </head>
+        <body data-spy="scroll" data-target="#navbar" data-offset="450">
+            <div class="wrapper">
+                <header>
+                    <div class="d-flex flex-wrap" id="top">
+                            <div class="mr-auto">The Oldest Cheese Shop in Richmond founded by the Wensleydale family</div>
+                            <div>
+                                <span tabindex="0"><i class="fas fa-user"></i>&nbsp;account</span>
+                                <span tabindex="0"><i class="fa fa-envelope"></i>&nbsp;Contact Us</span>
+                                <span tabindex="0"><i class="fa fa-phone"></i>&nbsp;0333 555 666</span>
+                            </div>
+                    </div>    
+                    <div class="d-flex flex-wrap mt-5 justify-content-between">                       
+                        <ul class="flex-grow-1 ml-3">
+                            <li id="head-text">YE OLD CHEESE EMPORIUM</li>
+                            <li id="sub-text">PURVEYOR OF FINE CHEESE TO THE GENTRY AND THE POVERTY-STRICKEN TOO</li>
+                        </ul>    
+                        <ul class="align-self-center">
+                            <li class="fa fa-search fa-2x" id="search_icon"></li>
+                            <li id="search_field"><input type="search" name="search" id=""></li>
+                            <li class="fas fa-shopping-basket fa-2x"></li>
+                        </ul>
+                        <div class="fas fa-bars" role="button" onclick="openClose()"></div>
+                    </div>
+                        <nav id="navBar">
+                            <div class="far fa-times-circle" role="button" onclick="openClose()"></div> 
+                            <ul class="top-nav"> 
+                                <li class="menu-item"><a href="../index.html">Home</a></li>
+                                <li class="menu-item-blank"><a href="#">About Us</a></li>
+                                <li class="menu-item"><a href="../cheeses.html" class="active">Cheeses</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese baskets</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese Club</a></li>
+                                <li class="menu-item"><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                </header>
+                <main>
+                    <h1>Tilsiter Cheese</h1>
+                    <hr>
+                    <div class="container-fluid" id="cheese-info-page">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p>
+                                    Tilsit cheese or Tilsiter cheese is a pale yellow semi-hard smear-ripened cheese, 
+                                    created in the mid-19th century by Prussian-Swiss settlers, the Westphal family, 
+                                    from the Emmental valley. The original buildings from the cheese plant still exist 
+                                    in Sovetsk, Russia, formerly Tilsit, on the Neman River (also known as the Memel), 
+                                    in the former German province of East Prussia. 
+
+                                    Tilsiter has a medium-firm texture with irregular holes or cracks. 
+                                    Commercially produced Tilsiter is made from pasteurized cow's milk, 
+                                    ranges from 30 to 60% milk fat, and has a dark yellow rind. 
+                                    After the main part of its production, the cheese needs to rest 
+                                    for an additional 2 months. Often flavoured with caraway seed and 
+                                    peppercorns, Tilsiter is a complement to hearty brown/rye breads and dark beers.
+                                    <h2>£9.99</h2>
+                                    <hr>
+                                    <div>
+                                        <form action="#">
+                                            <label for="qty">Qty.</label>
+                                            <select name="qty" id="qty">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </form>    
+                                            <span style="display: none;">I'm afraid we never have that at the end of the week, we get it fresh on Monday.</span>
+                                            <a href="#" class="btn btn-primary btn-sm" role="button">Add to basket</a>
+                                    </div>
+                            </div>
+                            <div class="col-sm"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Nutrition Facts</h2>
+                                <ul>
+                                    <li>- Calories(kcal): 339</li>
+                                    <li>- Cholesterol: 102mg</li>
+                                    <li>- Natrium: 753mg</li>
+                                    <li>- Calium: 65mg</li>
+                                    <li>- Carbohydrate: 1.9mg</li>
+                                </ul>
+                                
+                            </div>
+                            <div class="col-sm">
+                                <h2>More Info</h2>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    when an unknown printer took a galley of type and scrambled it to make a type 
+                                    specimen book. It has survived not only five centuries, but also the leap into 
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in 
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including 
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                        </div>
+                        <h2>Similar cheeses</h2>
+                        <div class="row">
+                            <div class="card col-sm column-layout" style="min-width: 16em;">
+                                <img class="card-img-top" src="../images/cheeses/caerphilly-cheese.jpg" alt="Caerphilly Cheese image">  
+                                <div class="card-body">
+                                    <h3 class="card-title">Caerphilly</h3>
+                                    <p class="card-text">
+                                        Caerphilly is a hard, crumbly white cheese that originated in the area around the 
+                                        town of Caerphilly, Wales. It is thought to have been created to provide food for 
+                                        the local coal miners.
+                                    </p> 
+                                    <div>
+                                        <span style="display: none;">Ah! It's beeeen on order, for two weeks. Was expecting it this morning.</span>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-sm column-layout" style="min-width: 16em;">
+                                <img class="card-img-top" src="../images/cheeses/stilton-blue-cheese.jpg" alt="Stilton Cheese image">  
+                                <div class="card-body">
+                                    <h3 class="card-title">Stilton</h3>
+                                    <p class="card-text">
+                                        Stilton is an English cheese, produced in two varieties: Blue, which has had 
+                                        Penicillium roqueforti added to generate a characteristic smell and taste, and White, which has not. 
+                                    </p>
+                                    <div>
+                                        <span style="display: none;">Sorry.</span>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                    </div>
+                                </div>
+                            </div>                                                             
+                            <div class="card col-sm column-layout" style="min-width: 16em;">
+                                <img class="card-img-top" src="../images/cheeses/bel-paese.jpg" alt="Bel Paese Cheese image">  
+                                <div class="card-body">
+                                    <h3 class="card-title">Bel Paese</h3>
+                                    <p class="card-text">
+                                        Bel Paese is a semi-soft Italian cheese. 
+                                        It was invented in 1906 by Egidio Galbani who wanted to produce a mild and delicate cheese 
+                                        to sell mainly in Italy.
+                                    </p>
+                                    <div>
+                                        <span style="display: none;">Sorry.</span>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                        <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popUp">
+                        <p></p>
+                        <input type="submit" value="Close" id="closeBtnRef" style="font-size: 1rem;">
+                    </div>
+                    <div id="cover"></div>
+                </main>
+            </div>
+            <footer>
+                <hr />
+                Ye Old Cheese Emporium •  Richmond, London UK • This website is it's creator's humble homage to <a href="https://www.youtube.com/watch?v=Hz1JWzyvv8A&t=172s&ab_channel=AndrewBoynton" target="_blank">this.</a>
+            </footer>
+        <!--Jquery och Bootstrap bundle-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+        <!--My own JS-->
+        <script src="../script/script.js"></script>
+        <!-- Optional JavaScript for jquery-->
+        <!-- jQuery first, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous" ></script>
+    </body>    
+</html>

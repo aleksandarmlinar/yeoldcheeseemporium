@@ -1,0 +1,102 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <title>Contact • Ye Old Cheese Emporium</title>
+            <!-- Requiered meta tags -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+            <meta charset="utf-8">
+            <!-- Different links for css, bootstrap etc.-->
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body data-spy="scroll" data-target="#navbar" data-offset="450">
+            <div class="wrapper">
+                <header>
+                    <div class="d-flex flex-wrap" id="top">
+                            <div class="mr-auto">The Oldest Cheese Shop in Richmond founded by the Wensleydale family</div>
+                            <div>
+                                <span tabindex="0"><i class="fas fa-user"></i>&nbsp;account</span>
+                                <span tabindex="0"><i class="fa fa-envelope"></i>&nbsp;Contact Us</span>
+                                <span tabindex="0"><i class="fa fa-phone"></i>&nbsp;0333 555 666</span>
+                            </div>
+                    </div>    
+                    <div class="d-flex flex-wrap mt-5 justify-content-between">                       
+                        <ul class="flex-grow-1 ml-3">
+                            <li id="head-text">YE OLD CHEESE EMPORIUM</li>
+                            <li id="sub-text">PURVEYOR OF FINE CHEESE TO THE GENTRY AND THE POVERTY-STRICKEN TOO</li>
+                        </ul>    
+                        <ul class="align-self-center">
+                            <li class="fa fa-search fa-2x" id="search_icon"></li>
+                            <li id="search_field"><input type="search" name="search" id=""></li>
+                            <li class="fas fa-shopping-basket fa-2x"></li>
+                        </ul>
+                        <div class="fas fa-bars" role="button" onclick="openClose()"></div>
+                    </div>
+                        <nav id="navBar">
+                            <div class="far fa-times-circle" role="button" onclick="openClose()"></div> 
+                            <ul class="top-nav"> 
+                                <li class="menu-item"><a href="index.html">Home</a></li>
+                                <li class="menu-item-blank"><a href="#">About Us</a></li>
+                                <li class="menu-item"><a href="cheeses.html">Cheeses</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese baskets</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese Club</a></li>
+                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                </header>
+                <main>
+                    <h1>Contact</h1>
+                    <hr>
+                    <div class="container-fluid" id="contact-page">
+                        <div class="row">
+                            <div class="col col-sm">
+                                <h2>Come see us and say hello!</h2>
+                                <p>Paved Court Richmond TW91<br>London UK</p>
+                                <hr>
+                                <h2>Or send us an e-mail.</h2>
+                                <a href="mailto:contact@montypython.com">contact@yeoldcheeseemporium.com</a>
+                                <hr>
+                                <h2>Or why not give Us a call?</h2>
+                                <p>0333 555 666</p>
+                                <hr>
+                                <h2>We are soon out of punctuation marks!</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.877818435883!2d-0.30872608390538014!3d51.460399679627464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c4796424439%3A0x8cae7ed744629866!2sPaved%20Ct%2C%20Richmond%2C%20Storbritannien!5e0!3m2!1ssv!2sse!4v1618923731960!5m2!1ssv!2sse" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="col col-sm">
+                                <h2>Missing some cheese type? Let us know!</h2>
+                                <form action="#" id="cheese-form">
+                                    <label for="cheeseid">Name of the cheese*</label>
+                                    <input type="text" name="cheeseid" id="cheeseid" required>
+                                    <label for="name">Your name*</label>
+                                    <input type="text" name="name" id="name" required>
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" name="email" id="email" required>
+                                    <label for="phone">Phone number*</label>
+                                    <input type="tel" name="phone" id="phone" required>
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" cols="30" rows="6" form="cheese-form"></textarea>
+                                    <input type="submit" value="Send" class="btnRef">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popUp">
+                        <p></p>
+                        <input type="submit" value="Close" id="closeBtnRef" style="font-size: 1rem;">
+                    </div>
+                    <div id="cover"></div>
+                </main>
+            </div>
+            <footer>
+                <hr />
+                Ye Old Cheese Emporium •  Richmond, London UK • This website is it's creator's humble homage to <a href="https://www.youtube.com/watch?v=Hz1JWzyvv8A&t=172s&ab_channel=AndrewBoynton" target="_blank">this.</a>
+            </footer>
+        <!--Jquery och Bootstrap bundle-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+        <!--My own JS-->
+        <script src="script/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>    
+</html>

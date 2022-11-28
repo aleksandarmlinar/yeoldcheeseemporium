@@ -1,0 +1,258 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <title>Cheeses • Ye Old Cheese Emporium</title>
+            <!-- Requiered meta tags -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+            <meta charset="utf-8">
+            <!-- Different links for css, bootstrap etc.-->
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body data-spy="scroll" data-target="#navbar" data-offset="700">
+            <div class="wrapper">
+                <header>
+                    <div class="d-flex flex-wrap" id="top">
+                            <div class="mr-auto">The Oldest Cheese Shop in Richmond founded by the Wensleydale family</div>
+                            <div>
+                                <span tabindex="0"><i class="fas fa-user"></i>&nbsp;account</span>
+                                <span tabindex="0"><i class="fa fa-envelope"></i>&nbsp;Contact Us</span>
+                                <span tabindex="0"><i class="fa fa-phone"></i>&nbsp;0333 555 666</span>
+                            </div>
+                    </div>    
+                    <div class="d-flex flex-wrap mt-5 justify-content-between">                       
+                        <ul class="flex-grow-1 ml-3">
+                            <li id="head-text">YE OLD CHEESE EMPORIUM</li>
+                            <li id="sub-text">PURVEYOR OF FINE CHEESE TO THE GENTRY AND THE POVERTY-STRICKEN TOO</li>
+                        </ul>    
+                        <ul class="align-self-center">
+                            <li class="fa fa-search fa-2x" id="search_icon"></li>
+                            <li id="search_field"><input type="search" name="search" id=""></li>
+                            <li class="fas fa-shopping-basket fa-2x"></li>
+                        </ul>
+                        <div class="fas fa-bars" role="button" onclick="openClose()"></div>
+                    </div>
+                        <nav id="navBar">
+                            <div class="far fa-times-circle" role="button" onclick="openClose()"></div> 
+                            <ul class="top-nav"> 
+                                <li class="menu-item"><a href="index.html">Home</a></li>
+                                <li class="menu-item-blank"><a href="#">About Us</a></li>
+                                <li class="menu-item"><a href="cheeses.html">Cheeses</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese baskets</a></li>
+                                <li class="menu-item-blank"><a href="#">Cheese Club</a></li>
+                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                </header>
+                <nav class="nav navbar" id="navbar">
+                    <a class="nav-link active" href="#section1">Section 1</a>
+                    <a class="nav-link" href="#section2">section 2</a>
+                    <a class="nav-link" href="#section3">Section 3</a>
+                  </nav>
+                <main>
+                    <h1>Our cheeeses</h1>
+                    <hr>
+                    <div class="container-fluid" id="cheeses-content">
+                        <div class="row">
+                            <div class="col-sm-10" id="fun">
+                                <div class="row">
+                                    <div class="card col-sm column-layout" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/leicester-cheese.jpg" alt="Leicester Cheese image">  
+                                        <div class="card-body">
+                                            <h3 class="card-title">Red Leicester</h3>
+                                            <p class="card-text">Red Leicester (also known simply as Leicester or Leicestershire cheese) 
+                                                is an English cheese, made in a similar manner to Cheddar cheese, although it is crumbly in 
+                                                texture. 
+                                            </p>  
+                                            <div>
+                                                <span style="display: none;">I'm, a-fraid we're fresh out of Red Leicester.</span> 
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card col-sm column-layout" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/tilsit-cheese.jpg" alt="Tilsit Cheese image">  
+                                        <div class="card-body">
+                                            <h3 class="card-title">Tilsit</h3>
+                                            <p class="card-text">
+                                                Tilsit cheese or Tilsiter cheese is a pale yellow semi-hard smear-ripened cheese, 
+                                                created in the mid-19th century by Prussian-Swiss settlers, the Westphal family, 
+                                                from the Emmental valley.
+                                            </p>    
+                                            <div>
+                                                <span style="display: none;">I'm afraid we never have that at the end of the week, we get it fresh on Monday.</span>
+                                                <a class="btn btn-primary btn-sm" href="cheeses/tilsiter-cheese.html" role="button">Click me!</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card col-sm column-layout" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/caerphilly-cheese.jpg" alt="Caerphilly Cheese image">  
+                                        <div class="card-body anim">
+                                            <h3 class="card-title">Caerphilly</h3>
+                                            <p class="card-text">
+                                                Caerphilly is a hard, crumbly white cheese that originated in the area around the 
+                                                town of Caerphilly, Wales. It is thought to have been created to provide food for 
+                                                the local coal miners.
+                                            </p>    
+                                            <div>
+                                                <span style="display: none;">Ah! It's beeeen on order, for two weeks. Was expecting it this morning.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="section2" data-spy="scroll" data-target>    
+                                    <div class="card col-sm column-layout anim anim-opacity anim-1" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/bel-paese.jpg" alt="Bel Paese Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-1">
+                                            <h3 class="card-title">Bel Paese</h3>
+                                            <p class="card-text">
+                                                Bel Paese is a semi-soft Italian cheese. 
+                                                It was invented in 1906 by Egidio Galbani who wanted to produce a mild and delicate cheese 
+                                                to sell mainly in Italy.
+                                            </p>   
+                                            <div>
+                                                <span style="display: none;">Sorry.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>                               
+                                    <div class="card col-sm column-layout anim anim-opacity anim-2" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/red-windsor-cheese.jpg" alt="Red Windsor Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-2">
+                                            <h3 class="card-title">Red Windsor</h3>
+                                            <p class="card-text">
+                                                Red Windsor is a pale cream English cheddar cheese, made using pasteurised cow's milk 
+                                                marbled with a wine, often a Bordeaux wine or a blend of port wine and brandy.
+                                            </p>  
+                                            <div>
+                                                <span style="display: none;">Normally, yes. Today the van broke down.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="card col-sm column-layout anim anim-opacity anim-3" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/stilton-blue-cheese.jpg" alt="Stilton Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-3">
+                                            <h3 class="card-title">Stilton</h3>
+                                            <p class="card-text">
+                                                Stilton is an English cheese, produced in two varieties: Blue, which has had 
+                                                Penicillium roqueforti added to generate a characteristic smell and taste, and White, which has not. 
+                                            </p> 
+                                            <div>
+                                                <span style="display: none;">Sorry.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="row" id="section3" data-spy="scroll" data-target>   
+                                    <div class="card col-sm column-layout anim anim-opacity anim-1" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/gruyere-cheese.jpg" alt="Gryere Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-1" >
+                                            <h3 class="card-title">Gruyere</h3>
+                                            <p class="card-text">
+                                                Gruyère is a hard yellow Swiss cheese that originated in the cantons of Fribourg, 
+                                                Vaud, Neuchâtel, Jura, and Berne in Switzerland. It is named after the town of Gruyères.
+                                            </p>  
+                                            <div>
+                                                <span style="display: none;">Not available.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="card col-sm column-layout anim anim-opacity anim-2" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/jarlsberg-cheese.jpg" alt="Norwegian Jarlsberg Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-2">
+                                            <h3 class="card-title">Norwegian Jarlsberg</h3>
+                                            <p class="card-text">
+                                                Jarlsberg is a mild cow's-milk cheese with large regular holes, 
+                                                that originates from Jarlsberg, Norway. Although it originated in Norway, 
+                                                it is also produced in Ohio and Ireland. 
+                                            </p>   
+                                            <div>
+                                                <span style="display: none;">Sorry, no.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div> 
+                                    </div>  
+                                    <div class="card col-sm column-layout anim anim-opacity anim-3" style="min-width: 17em;">
+                                        <img class="card-img-top" src="images/cheeses/venezuelan-beaver-cheese.jpg" alt="Venezuelan Beaver Cheese image">  
+                                        <div class="card-body anim anim-from-bottom anim-3">
+                                            <h3 class="card-title">Venezuelan Beaver Cheese</h3>
+                                            <p class="card-text">
+                                                There are no Venezuelan beavers, though they do have plenty of capybaras 
+                                                down there who might suffice if anyone can work out a way to milk them.
+                                            </p>   
+                                            <div>
+                                                <span style="display: none;">Not today, no.</span>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Read more</a>
+                                                <a class="btn btn-primary btn-sm" href="#!" role="button">Buy</a>
+                                            </div>
+                                        </div> 
+                                    </div>                                                                           
+                                </div>    
+                            </div>
+                            <div class="col-sm-2">
+                                <form action="#">
+                                    <h4>Sort by</h4>
+                                    <select name="sortby" id="sortby">
+                                        <option disabled selected value="empty">-select-</option>
+                                        <option value="availability">In stock</option>
+                                        <option value="lowest-price">Lowest price</option>
+                                        <option value="highest-price">Highest price</option>
+                                        <option value="popularity">Popularity</option>
+                                    </select>
+                                </form>
+                                <hr>
+                                <h4>Category</h4>
+                                <div>
+                                    <input type="checkbox" name="blue" id="blue">
+                                    <label for="blue">Blue</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="white" id="white">
+                                    <label for="white">White</label>
+                                </div>   
+                                <div>
+                                    <input type="checkbox" name="hard" id="hard">
+                                    <label for="hard">Hard</label>
+                                </div> 
+                                <div>
+                                    <input type="checkbox" name="soft" id="soft">
+                                    <label for="soft">Soft</label>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popUp">
+                        <p></p>
+                        <input type="submit" value="Close" id="closeBtnRef" style="font-size: 1rem;">
+                    </div>
+                    <div id="cover"></div>
+                </main>
+            </div>
+            <footer>
+                <hr />
+                Ye Old Cheese Emporium •  Richmond, London UK • This website is it's creator's humble homage to <a href="https://www.youtube.com/watch?v=Hz1JWzyvv8A&t=172s&ab_channel=AndrewBoynton" target="_blank">this.</a>
+            </footer>
+        <!--Jquery och Bootstrap bundle-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+        <!--My own JS-->
+        <script src="script/script.js"></script>
+        <!-- jQuery first, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous" ></script>
+    </body>    
+</html>

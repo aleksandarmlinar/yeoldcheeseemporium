@@ -1,0 +1,905 @@
+/**
+ TABLE OF CONTENTS
+ 1. Import fonts
+ 2. Color palette
+ 3. General settings
+ 4. Header
+    - 4.1 MENU
+ 5. Main  page
+    - 5.1 Column One
+    - 5.2 Column Two
+    - 5.3 Column Three
+    - 5.4 Column Four
+ 6. Cheeses
+    - 6.1 Cheese info page
+ 7. Contact page
+ 8. Scrollspy
+ 9. Media Queries
+*/
+
+
+/*
+--------------------------------------
+ 1. Import fonts
+--------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap'); 
+
+/*
+--------------------------------------
+ 2. Color palette
+--------------------------------------
+*/
+
+/* 
+
+ Text: #66666
+ Select: #d3d3d3
+ Backgrunder (meny, popup etc): #bf9104
+ Navigation: #bf9000
+ Navigation hover och active: #773d02
+ Rutan framsidan: #f1c232;
+ Knappar: #04576b
+ Viss text: #434343
+
+
+*/
+
+/*
+--------------------------------------
+ 3. General settings
+--------------------------------------
+*/
+
+/* 
+    bestämmer max storleken på bodyn samt bredden, typsnitt och textfärgen
+*/
+body {
+    /*box-sizing: border-box; är redan med från bootstrap*/ 
+    font-family: 'PT Sans', sans-serif;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* 
+    typsnitt för rubrikerna, valde att dom ska vara kursiva
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+}
+
+/* 
+    Tar bort dekoration på alla länkar och gör dom till samma färg som vanlig text
+*/
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* 
+    stilserar select elementet
+*/
+select {
+    border: .16rem solid #d3d3d3;
+    padding: .4rem;
+    border-radius: .6rem;
+    vertical-align: middle;
+}
+
+
+/* 
+    centrerar texten i sidfoten
+*/
+footer {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/* 
+    Stilserar och placerar en div som dyker upp när man trycker på vissa knappar på sidan. 
+    Postion sticky är vald för att den ska ha viss påsition även om man skrollar.
+*/
+
+#popUp {
+    font-size: 1rem;
+    position: sticky;
+    width: 100%;
+    height: 14rem;
+    bottom: 50%;
+    color: white;
+    background: #bf9104;
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 0 0 1rem #0000007a;
+    transition: all .2s ease;
+    z-index: 9999;
+    display: none;
+    border: .3rem solid #fff;
+}
+
+/* 
+    Stiliserar nappen som stänger ovannända rutan. 
+*/
+
+#closeBtnRef {
+    width: 8rem;
+    background-color: #04576b;
+    color: #fff;
+    padding: .4rem;
+    border: none;
+}
+
+/* 
+    Ett div element som täcker över hela sidan och förhindrar användaren att klicka på något annat än på ovannämnda knappen
+*/
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: auto;
+    opacity: 0.80;
+    background: rgb(59, 59, 59);
+    z-index: 10;
+    display: none;
+}
+
+
+/*
+--------------------------------------
+ 4. Header
+--------------------------------------
+*/
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* 
+    Stilisering av logotypen och sloganen under den
+*/
+#head-text, #sub-text {
+    font-family: 'Bitter', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+/* 
+    Stilisering av bara sloganen under logotypen
+*/
+#sub-text {
+    font-weight: 100;
+    font-size: inherit;
+    line-height: 1rem;
+    display: none;
+} 
+
+/* 
+    Topfältet som innehåler en slogan på högersidan och några  kontakt val på höger. Placeras med hjälp av Bootstrap
+*/
+#top {
+    justify-content: center;
+}
+
+#top span {
+    padding: 0 .6rem;
+    
+}
+
+/* 
+    Stiliserar innehållet som i topfältet är med hjälp av Bootstrap pushad till höger. VAr tvungen att gå med important pga Bootstrap
+*/
+.mr-auto {
+    text-align: center;
+    font-size: .6rem;
+    line-height: 2rem;
+    margin-right: 0!important;
+}
+
+/* 
+    013 // Stilisering av sista li elementet i div-elementet med denna klass, i detta fall är det ikonen shopping cart
+*/
+.align-self-center li:last-child{
+    margin-right: 1rem;
+    border-right: .1rem solid lightgray;
+    padding-right: 2rem;
+
+}
+
+/* 
+    Pretty selfexplanatory :)
+*/
+#search_icon {
+    display: none;
+}
+
+
+/* 4.1 MENU
+    ====================================================     */
+
+
+    /* 
+        Egenskaper för DOM elementet nav som är här gömd pga mobile-firs designen. 
+    */
+
+nav {
+    display: none;
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color:#bf9000;
+
+}
+
+/* 
+    Lista med alla menyval, stilisering
+*/
+
+.top-nav {
+    text-align: center;
+    background-color:#bf9000;
+    padding: 1rem 0;
+}
+
+/* 
+    Enskilda element i ul i menyn
+*/
+.top-nav li {
+    display: block;
+    padding: .6rem;
+    font-family: 'Bitter', sans-serif;
+}    
+
+/* 
+    Trycker ner menyn lite i mobilt läge
+*/
+
+.top-nav li:first-child {
+     margin-top: 2rem;
+}
+
+
+/* 
+    Stylisering av menyerna, active, hover itd
+*/
+.top-nav li a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 1rem;
+    transition: background-color .4s ease;
+} 
+
+.top-nav li a:hover {
+    background-color: #773d02;
+    box-shadow: inset 0 0 .1rem #000;
+} 
+
+.top-nav li a.active {
+    background-color: #773d02;
+    box-shadow: inset 0 0 .26rem #000;
+} 
+
+/* 
+    Storlek på ikonerna i toppfältet ändras i mobil läge x
+*/
+#top div:last-child {
+    font-size: .8rem;
+}
+
+/* 
+    Stilisering av knappen för sidomenyn i mobil/surfplatte läge
+*/
+div.far.fa-times-circle {
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem 0 0 1rem;
+    display: block;
+}
+
+.fas.fa-bars {
+    color: #666;
+    font-size: 2rem;
+    display: block;
+}
+
+/* 
+ Här växlar jag mellan ett sökfält och sökikon beroende på storleken på skärmen. Detta var enlig min design av sidan
+*/
+#search_field {
+    position: relative;
+    width: 12rem;
+    margin-right: 1rem;
+    border: .1rem solid lightgray;
+    height: 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+#search_field input {
+    border: none;
+    margin: .1rem .1rem 0 2.4rem;
+    width: 76%;
+    height: 1.4rem;
+}
+
+#search_field::before {
+    content: '\1F50D';
+    position: absolute;
+    left: .4rem;
+    font-size: 1.4rem;
+    opacity: .6;
+}
+
+/* 
+    Gömmer top menyn
+*/
+#navBar {
+    display: none;
+}
+
+/* 
+    Flyttar ner huvudinnehållet i mobil/surfplatte läge
+*/
+.mt-5, .my-5 {
+    border-bottom: .1rem solid lightgray;
+    margin: 1rem 0 3rem 0!important;
+}
+
+
+/*
+--------------------------------------
+ 5. Main page
+--------------------------------------
+*/
+
+/* 
+    Första bilden på framsidan
+*/
+#hero {
+    padding: 0;
+}
+
+/* 
+    lucka mellan rader
+*/
+#front-page-content .row {
+    gap: 1rem;
+}
+
+/* 
+    Egenskper för alla kolumner förutom #herop
+*/
+#front-page-content .col:not(#hero) {
+    min-height: 26rem;
+    margin-top: 1rem;
+}
+
+#hero img{
+    width: 100%;
+    height: auto;
+}
+
+/* 5.1 Column One
+-----------------------------------*/
+
+#front-page-content .row:nth-child(2) .col:nth-child(1) {
+    border: .04rem solid lightgray;
+}
+
+/* 
+    Egenskaper för första p elementet i första kolumnen i första raden (LICENSED ~ FOR ~ PUBLIC DANCING)
+*/
+#front-page-content .col:first-of-type p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* 
+    Egenskaper för bilden i samma ruta
+*/
+#front-page-content .row:nth-child(2) img{
+    width: 16rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Väljer alla span element som är bredvid img elementet  :) */
+#front-page-content img + span{
+    padding: 1rem;
+    background-color: #f1c232;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
+    color: #434343;
+    font-style: italic;
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8rem;
+    width: 80%;
+}
+
+/* 
+    Egenskaper för alla div element inuti elementet med id-t hero
+*/
+#hero div {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 50%;
+    color: white;
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-size: 2rem;
+    text-shadow: 0 0 .25rem black;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+/* 5.2 Column Two
+-----------------------------------*/
+
+/* 
+    Bakground för kolumnen
+*/
+#front-page-content .row:nth-child(2) .col:nth-child(2) {
+    background: url("../images/cheese-plate.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/* 
+    Inforutan i den kolumnen
+*/
+.info-box {
+    text-align: center;
+    width: 100%;
+    max-width: 23rem;
+    margin: 2rem auto;
+    background-color: #f1c232;
+    padding: 1rem;
+    color: #434343;
+    box-shadow: 0 0 1rem #000;
+}
+
+/* 
+    Väljer första span elementet där parent är ett div element
+*/
+.info-box>span:first-child {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+/* 
+    Väljer sista span elementet där parent är ett div element
+*/
+.info-box>span:last-child {
+    font-weight: 700;
+    color: black;
+}
+
+/* 5.3 Column Three
+-----------------------------------*/
+
+/* 
+    Lägger saker under varandra i tredje raden vid mindre upplösningar
+*/
+#front-page-content .row:nth-child(3) {
+    flex-direction: column;
+}
+
+/* 
+    Bakgrund som bild i tredje raden, tredje kolumn
+*/
+#front-page-content .row:nth-child(3) .col:nth-child(1) {
+    background: url("../images/cheese-shop.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/* 5.4 Column Four
+-----------------------------------*/
+
+#front-page-content .row:nth-child(3) .col:nth-child(2) {
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #434343;
+    border: none;
+}
+
+/*
+--------------------------------------
+ 6. Cheeses 
+--------------------------------------
+*/
+
+/* 
+    Här är det nog ganska klart, stiliserar och formar kort med olika ostar/produkter
+*/
+.card {
+    border: none;
+    margin: 0 1rem 1rem 0;
+    padding: .4rem;
+    background-color: #f3f3f3;
+}
+
+.card-text {
+    font-size: .8rem;
+}
+
+.card-body div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: #04576b;
+    border: none;
+    border-radius: 0;
+    padding: .5rem 1rem;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #04576b;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #04576b;
+}
+
+
+#cheeses-content .row .col:last-child{
+    border-left: 0;
+    max-width: 40%;
+    
+}
+
+#cheeses-content .row .col:last-child span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #773d00;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+    
+}
+
+
+#cheeses-content .row {
+    flex-direction: column-reverse;
+}
+
+/* 6.1 Cheese info page
+------------------------------------ */
+
+
+/* 
+    Första kolumnen i första raden
+*/
+#cheese-info-page .row:first-child .col-sm:first-child {
+
+    background-color: #f3f3f3;
+    padding: 2rem;
+}
+
+ /* 
+    Alla div element bredvid hr element i elementet med detta id (qvt och add to basket) 
+ */
+#cheese-info-page hr + div {
+    float: right;
+}
+
+/* 
+    Andra raden
+*/
+#cheese-info-page .row:nth-child(2) {
+
+    margin-top: 2rem;
+    border: .14rem solid lightgray;
+    padding: 2rem;
+}
+
+/* 
+    Andra raden, första elementet styling
+*/
+#cheese-info-page .row:nth-child(2) .col-sm:first-child{
+
+    border-right: 0;
+}
+
+/* 
+    Ytrymmejustering  i andra raden
+*/
+#cheese-info-page .row:nth-child(2) + h2 {
+    margin-top: 2rem;
+}
+
+#cheese-info-page form {
+    float: left;
+    margin-right: 1rem;
+}
+
+/* Tilsiter cheese bild */
+#cheese-info-page .row:first-child .col-sm:last-child{
+
+    background: url('../images/cheeses/tilsit-cheese.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 22rem;
+}
+
+/*
+--------------------------------------
+ 7. Contact page
+--------------------------------------
+*/
+
+/* 
+    Padding columner
+*/
+#contact-page .row:last-child .col{
+    padding: 2rem;
+}
+/* 
+    Background kolumn 2
+*/
+#contact-page .row .col:last-child {
+    background-color: #f3bc13;
+}
+
+/* 
+    Färg på alla h2 element i första kolumnen
+*/
+#contact-page .row:first-child .col:first-child h2{
+    color: #f3bc13;
+}
+/* 
+    Färg på alla h2 element i andra kolumnen
+*/
+
+#contact-page .row:first-child .col:last-child h2{
+    color: #fff;
+}
+
+/* 
+    Styling av knappar men inte den med klassnamn btnREf
+*/
+#contact-page input:not(.btnRef) {
+    border: none;
+    width: 100%;
+    padding: .4rem;
+}
+
+textarea {
+    overflow: scroll;
+    resize: vertical;
+    width: 100%;
+    border: none;
+}
+
+.btnRef {
+    width: 8rem;
+    background-color: #04576b;
+    color: #fff;
+    padding: .4rem;
+    border: none;
+}
+
+iframe{
+    width: 100%;
+    height: 20rem;
+    border:none;
+}
+
+
+
+/*
+--------------------------------------
+ 8. Scrollspy
+--------------------------------------
+*/
+
+#navbar{
+    visibility: hidden;
+    display: none;
+}
+
+.card{
+border: none;
+background-color: #f3f3f3;
+}
+
+/*animate  here */
+
+.anim {
+position: relative;
+transition: all .8s ease-out;
+} 
+
+.anim-opacity {
+    opacity: 0;
+}
+
+.anim-1{
+transition-delay: .2s;
+}
+
+.anim-2 {
+transition-delay: .3s;
+}
+
+.anim-3 {
+transition-delay: .6s;
+}
+
+.anim-4 {
+transition-delay: .8s;
+}
+
+.anim-from-bottom{
+bottom: -2rem;
+opacity: 0;
+}
+
+.activated .anim-from-bottom{
+bottom: 0;
+opacity: 1;
+}
+
+.activated .anim-opacity {
+    opacity: 1;
+}
+
+
+/*
+--------------------------------------
+ 9. Media queries
+--------------------------------------
+*/
+@media only screen and (min-width:1024px) {
+    
+    nav {
+        display:block;
+        position: initial;
+        width: 100%;
+        background-color:#fff;
+
+    }
+    .top-nav li {
+        display: inline;
+        padding: .6rem;
+        font-family: 'Bitter', sans-serif;
+    } 
+
+    i.far.fa-times-circle {
+        display: none;
+    }
+
+    .fas.fa-bars{
+        display: none;
+    }
+
+    #head-text{
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+
+    #sub-text {
+        display: block;
+        margin-top: .6rem;
+    }
+
+    #hero div{
+        font-size: 5rem!important;
+    }
+     
+    #top div:last-child {
+        font-size: .8rem;
+        line-height: 2rem;
+    }
+
+    .mr-auto, .mx-auto {
+        text-align: left;
+        font-size: .8rem;
+        line-height: 2rem;
+        margin-right: auto!important;
+    }
+
+    div.far.fa-times-circle {
+        display: none;
+    }
+
+    #navBar {
+        display: block;
+    }
+
+    #respSearch {
+        display: none;
+    }
+
+    ul.align-self-center {
+        border-right: 0;
+        padding-right: 0;
+    }
+
+    .mt-5, .my-5 {
+        border-bottom: 0;
+        margin: 3rem 0!important;
+    }
+
+    #popUp {
+        width: 21rem;
+    }
+
+    body {
+        width: 80%;
+    }
+
+    #cheeses-content .row {
+        flex-direction: row;
+    }
+
+    .info-box {
+        width: 80%;
+        padding: 1rem 2rem;
+    }
+  }
+
+
+/* Media query för rad3 på första sidan då den inte kunde växla till kolumner pga att jag använde background-image url i css */
+@media only screen and (min-width:600px) {
+
+    #front-page-content .row:nth-child(3) {
+        flex-direction: row;
+    }
+
+    #cheeses-content .row {
+        flex-direction: row;
+    }
+
+    #cheeses-content .row .col:last-child {
+        border-left: .14rem solid lightgray;
+        max-width: 16%;
+    }
+
+    #cheese-info-page .row:nth-child(2) .col:first-child {
+        border-right: .14rem solid lightgray;
+    }
+
+    #search_icon {
+        display: inline-block;
+    }
+    #search_field {
+        display: none;
+    }
+    
+    .align-self-center li:last-child {
+        margin-right: 1rem;
+        border-right: 0;
+        padding-right: 2rem;
+        display: inline;
+    }
+
+    .mr-auto {
+        margin-right: auto!important;
+    }
+
+    #hero div{
+        font-size: 3rem;
+    }
+    
+  }
+
